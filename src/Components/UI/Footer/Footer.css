@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #FBF8FF;
+    --secondary-color: #4B465B;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    
+  }
+
+.footer {
+    width: 100vw; 
+    display: flex;
+    height: 293px;
+    background: #1D1A27;
+    align-items: center;
+    justify-content: center; 
+    gap: 136px;
+
+}
+
+.footer-logo{
+    width: 208px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.logo img{
+    width: 208px;
+    height: 94px;
+    
+  }
+
+.media {
+    display: flex;
+    gap: 14px;
+}
+
+.media-container {
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBF8FF;
+}
+
+.media img{
+    width: 15px;
+    height: 15px;
+    
+  }
+
+  .footer-links {
+    list-style: none;  
+    padding: 0;  
+    margin: 0; 
+}
+.info {
+    display: flex;
+    flex-direction: column; 
+    gap: 75px; 
+}
+
+.horizonal {
+    display: flex;
+    gap: 136px;
+}
+.info-upper{
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+
+}
+
+.footer-links li {
+    margin-bottom: 24px; 
+}
+
+.footer-links a {
+    text-decoration: none; 
+    color: var(--primary-color); 
+    
+}
+
+.info-down .footer-links {
+    display: flex; 
+    gap: 16px;  
+    font-size: 14px;
+    color: var(--secondary-color)
+}
+
+.info-down .footer-links a {
+    color: var(--secondary-color)
+}
+
+.info-left, .info-right {
+    width:176px;
+    height: 96px;
+}
+.mini-title {
+    font-size: 12px;
+    color: var(--secondary-color)
+}
+
+.input-container{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;;
+}
+
+.input-container p {
+    margin: 0;
+}
+
+.number-input {
+    height: 32px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;  
+    outline: none; 
+}
+
+.number-input {
+    padding-left: 15px; 
+}
+
+.number-input::placeholder {
+    color: #CAC5DB;
+    opacity: 1; 
+}
+.submit-btn {
+    color: var(--primary-color);
+    height: 32px;
+    font-size: 14px;
+    background-color: #223CDD;
+    border-radius: 8px;
+    border: none;  
+    width: 100%;  
+    display: block; 
+}
