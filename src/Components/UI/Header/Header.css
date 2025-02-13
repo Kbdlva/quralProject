@@ -52,4 +52,39 @@ body {
   text-decoration: none;
   text-underline: none;
 }
+.language-select {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+}
 
+select {
+  width: 126;
+  height: 44;
+  gap: 8px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+
+
+  font-size: 16px;
+  border: none;
+
+  background-color: #223CDD;
+  color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  background-color: white;
+  color: #223CDD;
+}
+
+select option:hover {
+  background-color: #223CDD;
+  color: white;
+}

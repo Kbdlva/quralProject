@@ -18,16 +18,14 @@ function Header() {
                     <Link to={"/price"} className={"link"}>Price</Link>
                     <Link to={"/faq"} className={"link"}>FAQ</Link>
                 </div>
-                <div className={"language"}>
-
+                <div className="language-select">
+                    <select id="language" name="language">
+                        <option value="?lang=en" selected>🌐English</option>
+                        <option value="?lang=kk">🌐Қазақ</option>
+                        <option value="?lang=ru">🌐Русский</option>
+                    </select>
                 </div>
             </div>
-
-            <nav>
-                <ul>
-                    <button>English</button>
-                </ul>
-            </nav>
         </header>
     );
 }
