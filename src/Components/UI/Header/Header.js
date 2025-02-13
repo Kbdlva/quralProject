@@ -1,14 +1,30 @@
 import "./Header.css";
 import {Link} from "react-router-dom";
+import logo from "../../../diploma__logo.svg"
 
 function Header() {
     return (
         <header className="header">
-            <img src="logo.png" alt="Company Logo" className="logo" />
+            <div className={"logo__cname"}>
+                <div className={"logo"}>
+                    <img src={logo} alt="Company Logo"/>
+                </div>
+                <div className={"company__name"}>
+                    Qural - Learning Management System
+                </div>
+            </div>
+            <div className={"links__lang"}>
+                <div className={"links"}>
+                    <Link to={"/price"} className={"link"}>Price</Link>
+                    <Link to={"/faq"} className={"link"}>FAQ</Link>
+                </div>
+                <div className={"language"}>
+
+                </div>
+            </div>
+
             <nav>
                 <ul>
-                    <li><Link to={"/price"}>Price</Link></li>
-                    <li><Link to={"/faq"}>FAQ</Link></li>
                     <button>English</button>
                 </ul>
             </nav>

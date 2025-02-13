@@ -3,39 +3,53 @@ body {
     font-family: 'Lato', sans-serif;
   }
 
+.header__wrap{
+
+}
 .header {
-    display: flex;
-    justify-content: space-between; /* Align items in a row */
-    align-items: center; /* Vertically center */
-    padding: 10px 20px;
-    background-color: #f8f9fa; /* Light background */
+  width: 1278px;
+  height: 80px;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding-right: 32px;
+  padding-left: 32px;
+  background: #FBF8FF;
+  box-shadow: 4px 4px 10px 0 #958BB626;
+  display: flex;
+  margin: 16px auto 16px auto;
+  align-items: center;
   }
-  
-  .header ul {
-    display: flex;
-    list-style: none;
-    gap: 20px; /* Add spacing between menu items */
-    padding: 0;
-    margin: 0;
-  }
-  
-  .header li {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .header button {
-    padding: 5px 10px;
-    border: none;
-    background: #223CDD;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+.logo__cname{
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  gap: 32px;
+}
+.logo img{
+  width: 176px;
+  height: 80px;
+}
+.company__name{
+  width: 176px;
+  height: 37px;
+  color: #223CDD;
+}
+.links__lang{
+  display: flex;
+  gap: 89px;
+}
+.links{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  width: 384px;
+  height: 27px;
+}
+.link{
+  width: 176px; /*надо об этом подумать*/
+  font-size: 20px;
+  color: #958BB6;
+  text-decoration: none;
+  text-underline: none;
+}
+
