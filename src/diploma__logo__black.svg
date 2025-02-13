@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1207 495">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 250px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        stroke-width: 12.92px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(452 338.64)"><tspan x="0" y="0">Qural</tspan></text>
+  <g id="symbol">
+    <g id="pencil">
+      <polygon class="cls-3" points="136 128.34 217.11 128.34 217 357.34 176.56 419.08 136 357.17 136 128.34"/>
+      <line class="cls-3" x1="142.5" y1="180.84" x2="214.52" y2="180.84"/>
+    </g>
+    <g id="ruler">
+      <polygon class="cls-3" points="255.5 128.34 372.12 128.34 373.96 424.58 255.5 424.58 255.5 128.34"/>
+      <line class="cls-2" x1="262" y1="196.34" x2="311.59" y2="196.34"/>
+      <line class="cls-2" x1="262" y1="276.34" x2="311.59" y2="276.34"/>
+      <line class="cls-2" x1="259" y1="356.34" x2="308.59" y2="356.34"/>
+    </g>
+  </g>
+</svg>
