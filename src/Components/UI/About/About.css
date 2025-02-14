@@ -1,6 +1,8 @@
 .about__body{
     display: flex;
     gap: 32px;
+    justify-content: center;
+    padding-bottom: 40px;
 }
 .about__img{
     width: 488px;
