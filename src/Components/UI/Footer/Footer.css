@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 :root {
-    --primary-color: #FBF8FF;
-    --secondary-color: #4B465B;
+    /*--primary-color: #FBF8FF;*/
+    /*--secondary-color: #4B465B;*/
 
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    color: var(--primary-color);
+    color: #FBF8FF;
     font-size: 14px;
     font-weight: 500;
     
@@ -87,7 +87,7 @@ body {
 
 .footer-links a {
     text-decoration: none; 
-    color: var(--primary-color); 
+    color: #FBF8FF;
     
 }
 
@@ -95,11 +95,11 @@ body {
     display: flex; 
     gap: 16px;  
     font-size: 14px;
-    color: var(--secondary-color)
+    color: #4B465B
 }
 
 .info-down .footer-links a {
-    color: var(--secondary-color)
+    color: #4B465B
 }
 
 .info-left, .info-right {
@@ -108,7 +108,7 @@ body {
 }
 .mini-title {
     font-size: 12px;
-    color: var(--secondary-color)
+    color: #4B465B
 }
 
 .input-container{
@@ -139,7 +139,7 @@ body {
     opacity: 1; 
 }
 .submit-btn {
-    color: var(--primary-color);
+    color: #FBF8FF;
     height: 32px;
     font-size: 14px;
     background-color: #223CDD;

@@ -15,7 +15,7 @@ const IntroSection = () => {
                 <button>Get platform</button>
             </div>
             <div className={"intro__img"}>
-                <img src={stock}/>
+                <img src={stock} alt={"stock"}/>
             </div>
         </div>
     );

@@ -1,0 +1,28 @@
+.about__body{
+    display: flex;
+    gap: 32px;
+}
+.about__img{
+    width: 488px;
+    height: 319px;
+    border-radius: 8px;
+
+}
+.about__img img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+.about__text{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 16px;
+    width: 488px;
+}
+.text_title{
+    font-size: 24px;
+    font-weight: bold;
+}
+.text_desc{
+    font-size: 16px;
+}

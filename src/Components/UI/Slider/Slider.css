@@ -1,0 +1,37 @@
+.about{
+    width: 1214px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 36px;
+    color: black;
+}
+.about__title{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+}

@@ -59,8 +59,8 @@ body {
 }
 
 select {
-  width: 126;
-  height: 44;
+  width: 126px;
+  height: 44px;
   gap: 8px;
   border-radius: 8px;
   padding-top: 8px;
