@@ -1,6 +1,11 @@
 body{
     background-color: white;
 }
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+}
 
 * {
     margin: 0;
