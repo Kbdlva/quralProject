@@ -1,9 +1,16 @@
+.wrap{
+    width: 1214px;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+}
 .about{
     width: 1214px;
     display: grid;
     grid-template-columns: auto;
     gap: 36px;
     color: black;
+    justify-content: center;
+    margin: 0 auto 0 auto;
 }
 .about__title{
     font-weight: bold;

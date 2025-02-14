@@ -11,14 +11,18 @@ import 'swiper/css/pagination';
 
 const Slider = () => {
     return (
-        <div>
+        <div className={"about"}>
+            <div className={"about__title"}>
+                About us
+            </div>
             <Swiper
                 pagination={true}
                 modules={[Pagination, Autoplay]}
                 loop={true}
                 autoplay={{ delay: 7000, disableOnInteraction: false }}
                 speed={3000}
-                className="mySwiper">
+                className="mySwiper"
+                spaceBetween={10}>
                 <SwiperSlide>
                     <About/>
                 </SwiperSlide>
