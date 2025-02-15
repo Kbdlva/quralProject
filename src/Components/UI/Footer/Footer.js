@@ -4,6 +4,7 @@ import logo from "../../../Assets/logo-footer-fordark.svg"
 import instagram from "../../../Assets/instagram.png"
 import telegram from "../../../Assets/telegram.png"
 import whatsapp from "../../../Assets/whatsapp.png"
+import {Link} from "react-router-dom";
 
  
 function Footer() {
@@ -38,8 +39,8 @@ function Footer() {
           <div className="info-right">
                 <ul className="footer-links">
                     <li className="mini-title">Contacts</li> 
-                    <li><a href="/terms">+7 (777) 777 77 77</a></li>
-                    <li><a href="/contact">sales.@qural.kz</a></li>
+                    <li><Link to="/terms">+7 (777) 777 77 77</Link></li>
+                    <li><Link to="/contact">sales.@qural.kz</Link></li>
                 </ul>
             </div>
             </div>
