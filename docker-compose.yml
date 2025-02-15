@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   react-app:
-    build: .
+#    build: .
+    image: akiman555/quralproject:latest
     ports:
       - "3000:80"
-    restart: always
