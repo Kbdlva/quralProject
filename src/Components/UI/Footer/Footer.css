@@ -53,6 +53,8 @@ body {
 .media img{
     width: 15px;
     height: 15px;
+    cursor: pointer;
+
     
   }
 
@@ -93,6 +95,14 @@ body {
     gap: 16px;  
     font-size: 14px;
     color: #4B465B
+}
+
+.info-left .link {
+    display: flex; 
+    margin-bottom: 24px; 
+    gap: 16px;  
+    font-size: 14px;
+    color: #FBF8FF;
 }
 
 .info-down .footer-links a {
@@ -144,4 +154,6 @@ body {
     border: none;  
     width: 100%;  
     display: block; 
+    cursor: pointer;
+
 }

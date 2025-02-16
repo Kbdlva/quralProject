@@ -32,8 +32,8 @@ function Footer() {
             <div className="info-left">
                 <ul className="footer-links">
                     <li className="mini-title">Qural</li> 
-                    <li><a href="/terms">Price</a></li>
-                    <li><a href="/contact">FAQ Us</a></li>
+                    <Link to={"/price"} className={"link"}>Price</Link>
+                    <Link to={"/faq"} className={"link"}>FAQ</Link>
                 </ul>
           </div>
           <div className="info-right">
