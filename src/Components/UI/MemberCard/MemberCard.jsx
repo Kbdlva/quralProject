@@ -10,6 +10,7 @@ const MemberCard = () => {
             <div className={"card__text"}>
                 <div className={"card__title"}>
                     <b>Name Surname</b>
+                    <br />
                     Java developer
                 </div>
                 <div className={"card__desc"}>

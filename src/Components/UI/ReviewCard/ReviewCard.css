@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+
+.review__card {
+    width: 287px;
+    height: 229px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 8px;
+    border: 1px solid #EAE8F0;
+    background-color: #FBF8FF;
+    padding: 16px;          
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .title_part {
+    display: flex;
+    align-items: center;
+    gap: 8px;              
+  }
+  
+  .author-img {
+    width: 48px;           
+    height: 48px;
+    border-radius: 50%;    
+    object-fit: cover;
+  }
+  
+  .Author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .job {
+    font-size: 14px;
+    color: #958BB6;
+    margin: 0;
+  }
+  
+  .rating {
+    font-family: 'PT Serif', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: auto;     
+  }
+  
+  .stars {
+    width: 24px;            
+    height: 24px;
+  }
+  
+  .review_text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;              
+  }
+  
+  .quot-start,
+  .quot-end {
+    width: 24px;           
+    height: 24px;
+  }
+
+  .quot-end{
+    align-self: flex-end;
+  }
+  
+  .review-desc {
+    font-size: 12px;
+    text-align: left;
+    color: #3C3849;
+  }
+  

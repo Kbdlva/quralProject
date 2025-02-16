@@ -15,8 +15,10 @@ const Team = () => {
             <Swiper
                 navigation={true}
                 modules={[Navigation]}
-                spaceBetween={22}
-                slidesPerView={4}>
+                spaceBetween={5}
+                slidesPerView={4}
+                slidesOffsetBefore={100}
+                className='team'>
                 <SwiperSlide>
                     <MemberCard/>
                 </SwiperSlide>

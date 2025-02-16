@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 .card{
     display: flex;
     gap: 16px;
@@ -16,7 +18,7 @@
     width: 147px;
     display: grid;
     grid-template-columns: auto;
-    gap: 16px;
+    text-align: left;
 }
 .card__title{
     font-size: 18px;
@@ -30,24 +32,40 @@
 }
 
 .team__wrap{
-    width: 1280px;
-    display: grid;
-    grid-template-columns: auto;
+    margin-top: 50px !important;
+    width: 1300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
     gap: 36px;
     justify-content: center;
     margin: 0 auto;
 }
 .team__title{
-    width: 1216px;
+    font-family: 'PT Serif', serif;
+    align-self: center;
+    width: 1214px;
     font-size: 30px;
     font-weight: bold;
 }
-.swiper-button-prev {
-    left: -30px; /* Двигаем левее */
-    font-size: 20px
+.team .swiper-button-prev,
+.team .swiper-button-next {
+  top: 50px; 
+  background-color: #FBF8FF;
+  border-radius: 8px;
 }
 
-.swiper-button-next {
-    right: -30px; /* Двигаем правее, если нужно */
-    font-size: 20px
-}
+.team .swiper-button-prev {
+    left: 10px !important; 
+  }
+  
+  .team .swiper-button-next {
+    right: 20px; 
+  }
+  
+  /* Optional: Customize the arrow appearance */
+  .team .swiper-button-prev:after,
+  .team .swiper-button-next:after {
+    font-size: 20px;  /* Adjust arrow icon size */
+    color: #323232;   /* Adjust arrow icon color */
+  }

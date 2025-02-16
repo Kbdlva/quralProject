@@ -1,0 +1,22 @@
+.review__wrap{
+    width: 1214px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.review__title{
+    font-family: 'PT Serif', serif;
+    width: 1214px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.all_reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
