@@ -69,3 +69,19 @@
     font-size: 20px;  /* Adjust arrow icon size */
     color: #323232;   /* Adjust arrow icon color */
   }
+/*
+нужно их уменьшить или заменить на иконки стрелок
+если их передвинуть то они скрываются, это тоже надо исправить
+*/
+
+/* .swiper-button-prev {
+    transform: translateX(-100%) !important;
+    font-size: 20px !important;
+    color: black !important;
+}
+
+.swiper-button-next {
+    transform: translateX(100%) !important; 
+    font-size: 20px !important;
+    color: black !important;
+} */
