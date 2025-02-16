@@ -1,4 +1,10 @@
 import React from 'react';
+import "./Team.css"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import MemberCard from "../MemberCard/MemberCard";
 
 const Team = () => {
     return (
@@ -6,6 +12,27 @@ const Team = () => {
             <div className={"team__title"}>
                 Team
             </div>
+            <Swiper
+                navigation={true}
+                modules={[Navigation]}
+                spaceBetween={22}
+                slidesPerView={4}>
+                <SwiperSlide>
+                    <MemberCard/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <MemberCard/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <MemberCard/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <MemberCard/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <MemberCard/>
+                </SwiperSlide>
+            </Swiper>
         </div>
     );
 };

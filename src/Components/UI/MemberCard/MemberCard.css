@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    gap: 16px;
+    width: 280px;
+}
+.card__img{
+    width: 100px;
+    height: 102px;
+}
+.card__img img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+.card__text{
+    width: 147px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 16px;
+}
+.card__title{
+    font-size: 18px;
+}
+.card__title b{
+    font-size: 20px;
+}
+.card__desc{
+    font-size: 16px;
+    color: #958BB6;
+}
