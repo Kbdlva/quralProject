@@ -9,7 +9,7 @@
     border-radius: 8px;
     border: 1px solid #EAE8F0;
     background-color: #FBF8FF;
-    padding: 16px;          
+    padding: 16px;           /* Adjust padding as needed */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -18,40 +18,42 @@
   
   .title_part {
     display: flex;
-    align-items: center;
-    gap: 8px;              
+    justify-content: space-between;
   }
   
+  /* Author Image */
   .author-img {
-    width: 48px;           
+    width: 48px;           /* Example size */
     height: 48px;
-    border-radius: 50%;    
-    object-fit: cover;
+    border-radius: 50%; 
   }
   
+  /* Author Details: arranged vertically */
   .Author {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   
+  /* Author Name */
   .name {
     font-size: 18px;
     font-weight: 500;
     margin: 0;
   }
   
+  /* Author Job */
   .job {
     font-size: 14px;
     color: #958BB6;
     margin: 0;
   }
   
+  /* Rating: can be aligned to the right if desired */
   .rating {
     font-family: 'PT Serif', serif;
     font-size: 24px;
-    font-weight: 700;
-    margin-left: auto;     
+    font-weight: 700;   
   }
   
   .stars {
@@ -59,11 +61,12 @@
     height: 24px;
   }
   
+  /* Review Text: arranged vertically */
   .review_text {
     display: flex;
     flex-direction: column;
 
-    gap: 8px;              
+    gap: 8px;              /* Space between quote images and text */
   }
   
   .quot-start,

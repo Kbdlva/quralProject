@@ -1,0 +1,21 @@
+.price__wrap{
+    width: 1214px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.desc{
+    font-size: 16px;
+}
+
+.all_prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 24px;
+}

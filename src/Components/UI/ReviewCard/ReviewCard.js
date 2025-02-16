@@ -19,7 +19,7 @@ const ReviewCard = () => {
             <img src={star} alt="star" className='stars'></img>
             </div>
             <div className='review_text'>
-                <img src={quote2} alt="start"className='quot-start'></img>
+                <img src={quote1} alt="start"className='quot-start'></img>
                 <div className='review-desc'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                  eiusmod tempor incididunt ut labore et dolore magna 
