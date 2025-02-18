@@ -44,10 +44,10 @@ function Footer() {
                 </ul>
             </div>
             </div>
-            <div class="input-container">
+            <div className="input-container">
                 <p>Phone number</p>
                 <input type="tel" placeholder="+7 (777) 777 77 77" className="number-input"></input>
-                <button class="submit-btn">Receive consultation</button>
+                <button className="submit-btn">Receive consultation</button>
             </div>
             </div>
 

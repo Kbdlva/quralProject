@@ -1,8 +1,70 @@
 version: '3.8'
 
 services:
-  react-app:
-#    build: .
-    image: akiman555/quralproject:latest
-    ports:
-      - "3000:80"
+    react-app:
+        image: akiman555/quralproject:latest
+        ports:
+            - "3000:80"
+    lms-core:
+        image: banurr/lms-core:latest
+        container_name: lms-core
+        ports:
+            - "8080:8080"
+        depends_on:
+            - postgresql
+            - redis
+            - rabbitmq
+        environment:
+            # Database Connection
+            - DB_URL=jdbc:postgresql://postgresql:5432/lms-core-db
+            - DB_USERNAME=postgres
+            - DB_PASSWORD=postgres
+
+            # Redis Configuration
+            - REDIS_HOST=redis
+            - REDIS_PORT=6379
+            - REDIS_PASSWORD=redis
+
+            # RabbitMQ Configuration
+            - RABBIT_HOST=rabbitmq
+            - RABBIT_PORT=5672
+            - RABBIT_USERNAME=guest
+            - RABBIT_PASSWORD=guest
+
+            # Flyway Migration
+            - FLYWAY_ENABLE=true
+
+            # JWT Configuration
+            - JWT_SECRET=dzNNZ04zZ001Q3I4N3lkV0tSamx1MlQ5T1VYc3AyUHdRNXg0aENhbFZxdEZjYWlnSGVQb1hvUzRqMzJEc2FYfQ==
+            - JWT_EXPIRATION=1080000
+
+    postgresql:
+        image: 'postgres'
+        container_name: 'lms-core-db'
+        restart: always
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=lms-core-db
+        ports:
+            - "5432:5432"
+
+    redis:
+        image: 'redis'
+        container_name: 'lms-core-redis'
+        restart: always
+        environment:
+            - REDIS_PASSWORD=redis
+        ports:
+            - "6379:6379"
+
+    rabbitmq:
+        image: rabbitmq:3-management
+        container_name: rabbitmq
+        restart: always
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        environment:
+            - RABBITMQ_DEFAULT_USER=guest
+            - RABBITMQ_DEFAULT_PASS=guest

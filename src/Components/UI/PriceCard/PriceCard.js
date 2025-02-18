@@ -33,14 +33,14 @@ const PriceCard =  ({
                     </div>
                 </div>
                 <div className='ben'>
-                    <img src={call} className='icon'>
+                    <img src={call} className='icon' alt={""}>
                     </img>
                     <div className="benefit_name">
                         Always in touch  
                     </div>
                 </div>
                 <div className='ben'>
-                    <img src={personal} className='icon'>
+                    <img src={personal} className='icon' alt={""}>
                     </img>
                     <div className="benefit_name">
                         Personalized onboarding   
