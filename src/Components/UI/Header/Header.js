@@ -1,6 +1,6 @@
 import "./Header.css";
 import { useState } from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import logo from "../../../logo_blueText.svg"
 import langWhiteIcon from "../../../Assets/icons/language-white.svg";
 import langBlueIcon from "../../../Assets/icons/language-blue.svg";
@@ -28,8 +28,18 @@ function Header() {
             </div>
             <div className={"links__lang"}>
                 <div className={"links"}>
-                    <Link to={"/price"} className={"link"}>Price</Link>
-                    <Link to={"/faq"} className={"link"}>FAQ</Link>
+                    <NavLink
+                        to={"/price"}
+                        className={({ isActive }) => isActive ? "active-link" : "link"}
+                    >
+                        Price
+                    </NavLink>
+                    <NavLink
+                        to={"/faq"}
+                        className={({ isActive }) => isActive ? "active-link" : "link"}
+                    >
+                        FAQ
+                    </NavLink>
                 </div>
 
 
