@@ -34,9 +34,14 @@ body {
   height: 37px;
   color: #223CDD;
 }
+.no-underline {
+    text-decoration: none;
+}
 .links__lang{
   display: flex;
   gap: 89px;
+    text-align: center;
+    align-items: center;
 }
 .links{
   display: flex;

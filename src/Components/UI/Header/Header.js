@@ -19,12 +19,17 @@ function Header() {
     return (
         <header className="header">
             <div className={"logo__cname"}>
-                <div className={"logo"}>
-                    <img src={logo} alt="Company Logo"/>
-                </div>
-                <div className={"company__name"}>
-                    Qural - Learning Management System
-                </div>
+                <Link to={"/main"}>
+                    <div className={"logo"}>
+                        <img src={logo} alt="Company Logo"/>
+                    </div>
+                </Link>
+                <Link to={"/main"} className={"no-underline"}>
+                    <div className={"company__name"}>
+                        Qural - Learning Management System
+                    </div>
+                </Link>
+
             </div>
             <div className={"links__lang"}>
                 <div className={"links"}>
