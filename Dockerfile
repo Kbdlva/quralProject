@@ -1,27 +1,20 @@
-# Используем Node.js в качестве базового образа
+# Используем Node.js для сборки
 FROM node:18-alpine AS build
 
-# Устанавливаем рабочую директорию
 WORKDIR /app
-
-# Копируем package.json и package-lock.json
 COPY package*.json ./
-
-# Устанавливаем зависимости
 RUN npm install
-
-# Копируем весь проект в контейнер
 COPY . .
-
-# Собираем React-приложение
 RUN npm run build
 
-# Используем Nginx для раздачи статических файлов
+# Используем Nginx для раздачи файлов
 FROM nginx:alpine
+
+# Копируем билд React
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Экспонируем порт 80
-EXPOSE 80
+# Копируем кастомный конфиг для обработки маршрутов
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Запускаем Nginx
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
