@@ -2,7 +2,8 @@ import axios from "axios";
 
 export default class PostService{
     static async pushLogin(login, password){
-        const url = "http://localhost:8080/auth/login";
+        const cont = "lms-core";
+        const url = `http://localhost:8080/auth/login`;
         const data = {
             login: login,
             password: password
@@ -14,6 +15,7 @@ export default class PostService{
             return response;
         } catch (error) {
             console.error("Error:", error);
+            return error.response || { status: 500, data: { message: "Unknown error" } };
         }
     }
 }

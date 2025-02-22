@@ -13,9 +13,11 @@ const Login = () => {
                 if (response.status === 200) {  // Assuming the API returns { success: true/false }
                     setIsAuth(true);
                     localStorage.setItem('auth', 'true');
+                    alert("Вход выполнен успешно!");
                     console.log("Login successful:", response);
                 } else {
                     setIsAuth(false);  // Ensure it stays false in case of failure
+                    alert(`Ошибка входа: ${response.data?.message || "Попробуйте снова"}`);
                     console.error("Login failed:", response.data);
                 }
             })

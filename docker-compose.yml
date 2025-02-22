@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
     react-app:
-        image: akiman555/quralproject:latest
+        image: akiman555/quralproject:local
         ports:
             - "3000:80"
     lms-core:
