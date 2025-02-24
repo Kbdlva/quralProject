@@ -3,14 +3,14 @@ import axios from "axios";
 
 const PostRequestButton = () => {
     const handlePostRequest = async () => {
-        const url = "http://localhost:8080/auth/login";
+        const url = "http://lms-core:8080/auth/login";
         const data = {
             login: "admin@gmail.com",
             password: "Admin123!"
         };
 
         try {
-            const response = await axios.get("http://localhost:8080/public/ping", {
+            const response = await axios.get(url, {
                 withCredentials: true, // Include credentials (if needed)
             });
             console.log("Response:", response.data);
