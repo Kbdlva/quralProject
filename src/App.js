@@ -8,9 +8,18 @@ import Footer from "./Components/UI/Footer/Footer";
 function App() {
   return (
       <BrowserRouter>
-          <Header/>
-          <AppRouter/>
-          <Footer/>
+          <div
+              style={{
+                  display:"flex",
+                  justifyContent:"center",
+                  flexDirection:"column",
+                  width:"100%"}}
+          >
+              <Header/>
+              <AppRouter/>
+              <Footer/>
+          </div>
+
       </BrowserRouter>
   );
 }

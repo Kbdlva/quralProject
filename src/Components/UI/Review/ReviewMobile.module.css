@@ -1,0 +1,22 @@
+.wrap{
+    /*width: 360;*/
+    height: 1060px;
+    gap: 29px;
+    padding-right: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: PT Serif, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    color: black;
+    margin-top: 64px;
+    margin-bottom: 24px;
+}
+.list{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}

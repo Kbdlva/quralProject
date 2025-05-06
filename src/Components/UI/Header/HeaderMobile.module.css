@@ -1,0 +1,34 @@
+.wrap{
+    /*width: 360px;*/
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+    background-color: #FBF8FF;
+    box-shadow: 4px 4px 10px 0 #958BB626, -4px -4px 4px 0 #958BB626;
+    align-items: center;
+}
+.logo{
+    width: 221px;
+    height: 46px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.logo img{
+    width: 102px;
+    height: 46px;
+}
+.logo p{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #223CDD;
+}
+.burger{
+    width: 24px;
+    height: 24px;
+}

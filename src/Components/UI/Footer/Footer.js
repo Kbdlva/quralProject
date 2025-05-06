@@ -1,28 +1,74 @@
 import "./Footer.css";
 import React from "react";
 import logo from "../../../Assets/logo-footer-fordark.svg"
-import instagram from "../../../Assets/instagram.png"
-import telegram from "../../../Assets/telegram.png"
-import whatsapp from "../../../Assets/whatsapp.png"
+import instagram from "../../../Assets/instagram.svg"
+import telegram from "../../../Assets/telegram.svg"
+import whatsapp from "../../../Assets/whatsapp.svg"
 import {Link} from "react-router-dom";
-
+import useWindowWidth from "../../../utils/useWindowWidth";
+import mob from './FooterMobile.module.css'
  
 function Footer() {
+    const width = useWindowWidth()
+
+    if (width < 400){
+        return (
+            <div className={mob.wrap}>
+                <div className={mob.logo}>
+                    <img src={logo} alt={"logo"}/>
+                    QURAL – Platform for Effective Learning Management
+                </div>
+                <div className={mob.links}>
+                    <span>
+                        Qural
+                    </span>
+                    <Link to={"/price"} className={mob.link}>Price</Link>
+                    <Link to={"/faq"} className={mob.link}>FAQ</Link>
+                </div>
+                <div className={mob.links}>
+                    <span>
+                        Contacts
+                    </span>
+                    <p>
+                        +7 (777) 777 77 77
+                    </p>
+                    <p>
+                        sales@qural.kz
+                    </p>
+                </div>
+                <div className={mob.media}>
+                    <img src={instagram} alt={"instagram"}/>
+                    <img src={telegram} alt={"telegram"}/>
+                    <img src={whatsapp} alt={"whatsapp"}/>
+                </div>
+                <div className={mob.phone}>
+                    <div className={mob.input}>
+                        Phone number
+                        <input
+                            placeholder={"+7 (777) 777 77 77"}
+                        />
+                    </div>
+                    <button>
+                        Receive consultation
+                    </button>
+                </div>
+                <div className={mob.boring}>
+                    <p>Условия использования</p>
+                    <p>Политика конфиденциальности</p>
+                    <p>Договор оферты</p>
+                </div>
+            </div>
+        );
+    }
   return (
     <footer className="footer">
       <div className="footer-logo">
       <img src={logo} alt="Company Logo"/>
         <p>QURAL – Platform for Effective Learning Management.</p>
         <div className="media">
-            <div className="media-container">
-                <img src={instagram} alt="instagram"></img>
-            </div>
-            <div className="media-container">
-                <img src={telegram} alt="telegram"></img>
-            </div>
-            <div className="media-container">
-                <img src={whatsapp} alt="whatsapp"></img>
-            </div>
+            <img src={instagram} alt="instagram"/>
+            <img src={telegram} alt="telegram"/>
+            <img src={whatsapp} alt="whatsapp"/>
         </div>
 
         </div>

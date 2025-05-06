@@ -5,8 +5,26 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import MemberCard from "../MemberCard/MemberCard";
+import useWindowWidth from "../../../utils/useWindowWidth";
+import mob from './TeamMobile.module.css'
 
 const Team = () => {
+    const width = useWindowWidth();
+
+    if (width<400){
+        return (
+            <div className={mob.wrap}>
+                Team
+                <div className={mob.list}>
+                    <MemberCard/>
+                    <MemberCard/>
+                    <MemberCard/>
+                    <MemberCard/>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className={"team__wrap"}>
             <div className={"team__title"}>

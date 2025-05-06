@@ -8,7 +8,7 @@ import Review from "../Components/UI/Review/Review";
 
 const MainPage = () => {
     return (
-        <div>
+        <div style={{display:"flex", flexDirection:"column", justifyContent:"center", width:"100%", alignItems: "center",}}>
             <IntroSection/>
             <Slider/>
             <Team/>

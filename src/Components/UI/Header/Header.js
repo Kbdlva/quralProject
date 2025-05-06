@@ -4,9 +4,14 @@ import {Link, NavLink} from "react-router-dom";
 import logo from "../../../logo_blueText.svg"
 import langWhiteIcon from "../../../Assets/icons/language-white.svg";
 import langBlueIcon from "../../../Assets/icons/language-blue.svg";
+import useWindowWidth from "../../../utils/useWindowWidth";
+import mob from "./HeaderMobile.module.css"
+import menu from '../../../Assets/icons/menu.svg'
 
 function Header() {
     const [selectedLanguage, setSelectedLanguage] = useState("en");
+    const [hoveredLang, setHoveredLang] = useState({});
+    const width = useWindowWidth();
 
     const languages = [
         { code: "en", label: "English" },
@@ -14,7 +19,17 @@ function Header() {
         { code: "ru", label: "Русский" },
     ];
 
-    const [hoveredLang, setHoveredLang] = useState({}); 
+    if (width < 400){
+        return (
+            <div className={mob.wrap}>
+                <div className={mob.logo}>
+                    <img src={logo} alt={"logo"}/>
+                    <p>Qural - Learning Management System</p>
+                </div>
+                <img src={menu} alt={"menu"} className={mob.burger}/>
+            </div>
+        );
+    }
 
     return (
         <header className="header">

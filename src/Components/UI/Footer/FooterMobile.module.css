@@ -1,0 +1,133 @@
+.wrap{
+    /*width: 360;*/
+    /*height: 689;*/
+    width: 100%;
+    gap: 24px;
+    padding: 24px 16px;
+    background-color: #1D1A27;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    width: 328px;
+    height: 116px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    color: #FBF8FF;
+}
+.links{
+    width: 176px;
+    height: 96px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FBF8FF;
+}
+.links span{
+    opacity: 45%;
+}
+.links a{
+    text-decoration: none;
+}
+.link{
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FBF8FF;
+}
+.links p{
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FBF8FF;
+}
+.media{
+    width: 124px;
+    height: 32px;
+    gap: 14px;
+    display: flex;
+}
+.media img{
+    width: 32px;
+    height: 32px;
+}
+.phone{
+    width: 100%;
+    height: 107px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    height: 58px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #FBF8FF;
+}
+.input input{
+    width: 100%;
+    height: 33px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 1px solid #BFB9D3;
+    background-color: #F4F3F8;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #1D1A27;
+}
+.input input::placeholder{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #CAC5DB;
+}
+.phone button{
+    width: 100%;
+    height: 33px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #223CDD;
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    color: #FBF8FF;
+}
+.boring{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 45%;
+}
+.boring p{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FBF8FF;
+}
