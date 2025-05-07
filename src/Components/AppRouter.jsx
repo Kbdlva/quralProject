@@ -9,7 +9,7 @@ const AppRouter = () => {
             {routes.map(route =>
                 <Route
                     path={route.path}
-                    element={route.component}
+                    element={React.cloneElement(route.component)}
                     key={route.path}
                 />
             )}

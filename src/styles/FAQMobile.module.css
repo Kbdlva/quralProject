@@ -1,0 +1,88 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #000000;
+}
+.header span{
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #958BB6;
+}
+.header p{
+    font-family: PT Serif, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #000000;
+}
+.video{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.player{
+    width: 332px;
+    aspect-ratio: 16/9;
+}
+.faqs{
+    width: 100%;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #59536D;
+}
+.text span{
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #958BB6;
+}
+.text p{
+    font-family: PT Serif, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.faq_section{
+display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

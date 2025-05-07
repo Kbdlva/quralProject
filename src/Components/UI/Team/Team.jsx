@@ -7,19 +7,42 @@ import 'swiper/css/navigation';
 import MemberCard from "../MemberCard/MemberCard";
 import useWindowWidth from "../../../utils/useWindowWidth";
 import mob from './TeamMobile.module.css'
+import translations from "../../../utils/translates";
 
 const Team = () => {
     const width = useWindowWidth();
+    const t = translations[localStorage.getItem('lang')];
 
     if (width<400){
         return (
             <div className={mob.wrap}>
-                Team
+                {t.team}
                 <div className={mob.list}>
-                    <MemberCard/>
-                    <MemberCard/>
-                    <MemberCard/>
-                    <MemberCard/>
+                    <MemberCard
+                        name={"Aidana Yensetaikyzy"}
+                        role={"CEO"}
+                        work={"TOO “Prime Source”"}
+                    />
+                    <MemberCard
+                        name={"Alina Kabdualiyeva"}
+                        role={"System Analyst"}
+                        work={"Halyk Market"}
+                    />
+                    <MemberCard
+                        name={"Nurbol Yermagambetov"}
+                        role={"Java developer"}
+                        work={"TOO “Prime Source”"}
+                    />
+                    <MemberCard
+                        name={"Madiyar Kuralov"}
+                        role={"Frontend Developer"}
+                        work={"SDU University"}
+                    />
+                    <MemberCard
+                        name={"Iliyas Bekkhozha"}
+                        role={"Backend Developer"}
+                        work={"SDU University"}
+                    />
                 </div>
             </div>
         );
@@ -28,7 +51,7 @@ const Team = () => {
     return (
         <div className={"team__wrap"}>
             <div className={"team__title"}>
-                Team
+                {t.team}
             </div>
             <Swiper
                 navigation={true}
@@ -38,19 +61,39 @@ const Team = () => {
                 slidesOffsetBefore={100}
                 className='team'>
                 <SwiperSlide>
-                    <MemberCard/>
+                    <MemberCard
+                        name={"Aidana Yensetaikyzy"}
+                        role={"CEO"}
+                        work={"TOO “Prime Source”"}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MemberCard/>
+                    <MemberCard
+                        name={"Alina Kabdualiyeva"}
+                        role={"System Analyst"}
+                        work={"Halyk Market"}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MemberCard/>
+                    <MemberCard
+                        name={"Nurbol Yermagambetov"}
+                        role={"Java developer"}
+                        work={"TOO “Prime Source”"}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MemberCard/>
+                    <MemberCard
+                        name={"Madiyar Kuralov"}
+                        role={"Frontend Developer"}
+                        work={"SDU University"}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MemberCard/>
+                    <MemberCard
+                        name={"Iliyas Bekkhozha"}
+                        role={"Backend Developer"}
+                        work={"SDU University"}
+                    />
                 </SwiperSlide>
             </Swiper>
         </div>

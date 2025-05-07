@@ -6,7 +6,7 @@
 /* Card Container */
 .price_card {
   width: 290px;           /* Fixed width */
-  height: 317px;          /* Fixed height */
+  min-height: 317px;          /* Fixed height */
   border-radius: 12px;    /* Rounded corners */
   border: 1px solid #BDC5F5;
   padding: 16px;
@@ -15,6 +15,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.price_card button{
+  width: 258px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 13px 24px;
+  background-color: #223CDD;
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  color: #FBF8FF;
 }
 
 /* Title and Duration Section */

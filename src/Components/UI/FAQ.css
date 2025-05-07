@@ -51,11 +51,12 @@
   .faq-item {
     display: flex;
     flex-direction: column;
+      gap: 8px;
   }
   
   .faq-question {
     width: 100%;
-    height: 56px;
+    /*height: 56px;*/
     border-radius: 8px;
     padding: 0 16px;
     box-sizing: border-box;

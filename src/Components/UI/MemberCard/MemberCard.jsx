@@ -1,9 +1,9 @@
 import React from 'react';
-import prof from "./profile.jpg"
+import prof from "./Avatar profile photo.svg"
 import useWindowWidth from "../../../utils/useWindowWidth";
 import mob from './MemberMobile.module.css'
 
-const MemberCard = () => {
+const MemberCard = ({name, role, work}) => {
     const width = useWindowWidth();
 
     if (width<400){
@@ -15,11 +15,11 @@ const MemberCard = () => {
                 <div className={mob.text}>
                     <div className={mob.title}>
                         <p>
-                            Name Surname
+                            {name}
                         </p>
-                        Java developer
+                        {role}
                     </div>
-                    Current Workplace
+                    {work}
                 </div>
             </div>
         );
@@ -31,12 +31,12 @@ const MemberCard = () => {
             </div>
             <div className={"card__text"}>
                 <div className={"card__title"}>
-                    <b>Name Surname</b>
+                    <b>{name}</b>
                     <br />
-                    Java developer
+                    {role}
                 </div>
                 <div className={"card__desc"}>
-                    Current Workplace
+                    {work}
                 </div>
             </div>
         </div>

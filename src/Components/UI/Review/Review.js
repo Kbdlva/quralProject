@@ -3,19 +3,27 @@ import "./Review.css"
 import ReviewCard from "../ReviewCard/ReviewCard";
 import mob from './ReviewMobile.module.css'
 import useWindowWidth from "../../../utils/useWindowWidth";
+import translations from "../../../utils/translates";
 
 const Review = () => {
     const width = useWindowWidth();
+    const t = translations[localStorage.getItem('lang')];
 
     if (width<400){
         return (
             <div className={mob.wrap}>
-                Reviews
+                {t.reviews}
                 <div className={mob.list}>
-                    <ReviewCard/>
-                    <ReviewCard/>
-                    <ReviewCard/>
-                    <ReviewCard/>
+                    <ReviewCard
+                        name={"Teacher"}
+                        work={"Tesla Educational center"}
+                        review={"In general, everything is clear and convenient"}
+                    />
+                    <ReviewCard
+                        name={"Teacher"}
+                        work={"Tesla Educational center"}
+                        review={"overall intuitive interface"}
+                    />
                 </div>
             </div>
         );
@@ -24,13 +32,19 @@ const Review = () => {
     return (
         <div className={"review__wrap"}>
             <div className={"review__title"}>
-                Review
+                {t.reviews}
             </div>
             <div className='all_reviews'>
-            <ReviewCard/>
-            <ReviewCard/>
-            <ReviewCard/>
-            <ReviewCard/>
+                <ReviewCard
+                    name={"Teacher"}
+                    work={"Tesla Educational center"}
+                    review={"In general, everything is clear and convenient"}
+                />
+                <ReviewCard
+                    name={"Teacher"}
+                    work={"Tesla Educational center"}
+                    review={"overall intuitive interface"}
+                />
             </div>
             
         </div>

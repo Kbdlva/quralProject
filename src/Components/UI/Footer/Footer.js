@@ -7,16 +7,18 @@ import whatsapp from "../../../Assets/whatsapp.svg"
 import {Link} from "react-router-dom";
 import useWindowWidth from "../../../utils/useWindowWidth";
 import mob from './FooterMobile.module.css'
+import translations from "../../../utils/translates";
  
 function Footer() {
-    const width = useWindowWidth()
+    const width = useWindowWidth();
+    const t = translations[localStorage.getItem('lang')];
 
     if (width < 400){
         return (
             <div className={mob.wrap}>
                 <div className={mob.logo}>
                     <img src={logo} alt={"logo"}/>
-                    QURAL – Platform for Effective Learning Management
+                    {t.qural_tagline}
                 </div>
                 <div className={mob.links}>
                     <span>
@@ -27,7 +29,7 @@ function Footer() {
                 </div>
                 <div className={mob.links}>
                     <span>
-                        Contacts
+                        {t.contacts}
                     </span>
                     <p>
                         +7 (777) 777 77 77
@@ -43,19 +45,15 @@ function Footer() {
                 </div>
                 <div className={mob.phone}>
                     <div className={mob.input}>
-                        Phone number
+                        {t.phone_number}
                         <input
+                            type="tel"
                             placeholder={"+7 (777) 777 77 77"}
                         />
                     </div>
                     <button>
-                        Receive consultation
+                        {t.receive_consultation}
                     </button>
-                </div>
-                <div className={mob.boring}>
-                    <p>Условия использования</p>
-                    <p>Политика конфиденциальности</p>
-                    <p>Договор оферты</p>
                 </div>
             </div>
         );
@@ -64,7 +62,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-logo">
       <img src={logo} alt="Company Logo"/>
-        <p>QURAL – Platform for Effective Learning Management.</p>
+        <p>{t.qural_tagline}</p>
         <div className="media">
             <img src={instagram} alt="instagram"/>
             <img src={telegram} alt="telegram"/>
@@ -84,26 +82,21 @@ function Footer() {
           </div>
           <div className="info-right">
                 <ul className="footer-links">
-                    <li className="mini-title">Contacts</li> 
+                    <li className="mini-title">{t.contacts}</li>
                     <li><Link to="/terms">+7 (777) 777 77 77</Link></li>
                     <li><Link to="/contact">sales.@qural.kz</Link></li>
                 </ul>
             </div>
             </div>
             <div className="input-container">
-                <p>Phone number</p>
+                <p>{t.phone_number}</p>
                 <input type="tel" placeholder="+7 (777) 777 77 77" className="number-input"></input>
-                <button className="submit-btn">Receive consultation</button>
+                <button className="submit-btn">{t.receive_consultation}</button>
             </div>
             </div>
 
 
             <div className="info-down">
-          <ul className="footer-links"> 
-            <li><a href="/terms">Условия использования</a></li>
-            <li><a href="/policy">Политика конфиденциальности</a></li>
-            <li><a href="/contract">Договор оферты</a></li>
-          </ul>
           </div>
           
         </div>

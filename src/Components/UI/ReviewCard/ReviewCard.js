@@ -7,7 +7,7 @@ import star from "../../../Assets/icons/star.svg"
 import useWindowWidth from "../../../utils/useWindowWidth";
 import mob from "./ReviewCardMobile.module.css"
 
-const ReviewCard = () => {
+const ReviewCard = ({name, work, review}) => {
     const width = useWindowWidth();
 
     if (width<400){
@@ -17,9 +17,9 @@ const ReviewCard = () => {
                     <div className={mob.left}>
                         <img src={circle} alt={"avatar"}/>
                         <div className={mob.author}>
-                            Name Surname
+                            {name}
                             <span>
-                                CEO JTS
+                                {work}
                             </span>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const ReviewCard = () => {
                 <div className={mob.text}>
                     <img src={quote1} alt={"quote"}/>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        {review}
                     </p>
                     <img src={quote2} alt={"quote"} style={{alignSelf:"flex-end"}}/>
                 </div>
@@ -43,8 +43,8 @@ const ReviewCard = () => {
             <div className='title_part'>
                 <img src={circle} alt="Author"></img>
                 <div className='Author'>
-                    <div className='name'>Name Surname</div>
-                    <div className='job'>CEO JTS</div>
+                    <div className='name'>{name}</div>
+                    <div className='job'>{work}</div>
                 </div>
                 <div className='rating'>8</div>
             <img src={star} alt="star" className='stars'></img>
@@ -52,10 +52,7 @@ const ReviewCard = () => {
             <div className='review_text'>
                 <img src={quote1} alt="start"className='quot-start'></img>
                 <div className='review-desc'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                 eiusmod tempor incididunt ut labore et dolore magna 
-                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    {review}
                 </div>
                 <img src={quote2} alt="end" className='quot-end'></img>
             </div>

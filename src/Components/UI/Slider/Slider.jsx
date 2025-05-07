@@ -8,14 +8,20 @@ import "swiper/css";
 import 'swiper/css/pagination';
 import useWindowWidth from "../../../utils/useWindowWidth";
 import mob from "./SliderMobile.module.css"
- 
+import translations from "../../../utils/translates";
+import one from '../../../Assets/about__img.png'
+import two from '../../../Assets/Rectangle 2.svg'
+import three from '../../../Assets/Rectangle 2 (1).svg'
+import four from '../../../Assets/Rectangle 2 (2).svg'
+
 const Slider = () => {
     const width = useWindowWidth();
+    const t = translations[localStorage.getItem('lang')];
 
     if (width<400){
         return (
             <div className={mob.wrap}>
-                About us
+                {t.about_us}
                 <Swiper
                     pagination={{
                         clickable: true,
@@ -27,16 +33,32 @@ const Slider = () => {
                     className="mySwiper"
                     spaceBetween={10}>
                     <SwiperSlide>
-                        <About/>
+                        <About
+                            stock={one}
+                            title={t.about_slide_1_title}
+                            desc={t.about_slide_1_description}
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <About/>
+                        <About
+                            stock={two}
+                            title={t.about_slide_2_title}
+                            desc={t.about_slide_2_description}
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <About/>
+                        <About
+                            stock={three}
+                            title={t.about_slide_3_title}
+                            desc={t.about_slide_3_description}
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <About/>
+                        <About
+                            stock={four}
+                            title={t.about_slide_4_title}
+                            desc={t.about_slide_4_description}
+                        />
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -46,7 +68,7 @@ const Slider = () => {
     return (
         <div className={"about"}>
             <div className={"about__title"}>
-                About us
+                {t.about_us}
             </div>
             <Swiper
                 pagination={{
@@ -57,18 +79,35 @@ const Slider = () => {
                 autoplay={{ delay: 7000, disableOnInteraction: false }}
                 speed={3000}
                 className="mySwiper"
-                spaceBetween={10}>
+                spaceBetween={10}
+            >
                 <SwiperSlide>
-                    <About/>
+                    <About
+                        stock={one}
+                        title={t.about_slide_1_title}
+                        desc={t.about_slide_1_description}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <About/>
+                    <About
+                        stock={two}
+                        title={t.about_slide_2_title}
+                        desc={t.about_slide_2_description}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <About/>
+                    <About
+                        stock={three}
+                        title={t.about_slide_3_title}
+                        desc={t.about_slide_3_description}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <About/>
+                    <About
+                        stock={four}
+                        title={t.about_slide_4_title}
+                        desc={t.about_slide_4_description}
+                    />
                 </SwiperSlide>
             </Swiper>
         </div>

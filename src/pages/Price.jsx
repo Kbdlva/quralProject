@@ -2,46 +2,77 @@ import React from 'react';
 // import "./Price.css"
 import PriceCard from "../Components/UI/PriceCard/PriceCard";
 import "../Components/UI//Price.css";
-
+import useWindowWidth from "../utils/useWindowWidth";
+import translations from "../utils/translates";
+import mob from '../styles/PriceMobile.module.css'
 
 
 const Price = () => {
+    const width = useWindowWidth();
+    const t = translations[localStorage.getItem('lang')];
+
+    if (width<400){
+        return (
+            <div className={mob.wrap}>
+                <div className={mob.text}>
+                    <p>{t.choose_plan_heading}</p>
+                    {t.choose_plan_description}
+                </div>
+                <div className={mob.list}>
+                    <PriceCard
+                        title = {t.plan_standard}
+                        duration ={t.duration_for_6_months}
+                        pay="189 990 ₸ "
+                        per=""
+                    />
+                    <PriceCard
+                        title = {t.monthly}
+                        duration ={t.available_for_a_year}
+                        pay="59 990 ₸ "
+                        per={t.per_month}
+                    />
+                    <PriceCard
+                        title = {t.annually}
+                        duration = {t.available_for_2_years}
+                        pay="349 990 ₸ "
+                        per={t.per_year}
+                    />
+                </div>
+            </div>
+        );
+    }
     return (
         <div className={"price__wrap"}>
 
-            <div className='intro'>
-            <p>Prices title header bla bla</p>
+            <div className='introP'>
+            <p>{t.price_packages}</p>
 
             <div className={"price__title"}>
-
-                Affordable Learning, Unlimited Potential
+                    {t.choose_plan_heading}
             </div>
             <div className='desc'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    {t.choose_plan_description}
             </div>
             </div>
         
             <div className='all_prices'>
             <PriceCard
-            title = "Standard"
-            duration = "for 6 months"
+            title = {t.plan_standard}
+            duration ={t.duration_for_6_months}
             pay="189 990 ₸ "
             per=""
             />
             <PriceCard
-            title = "Monthly"
-            duration = "favailable for a year"
+            title = {t.monthly}
+            duration ={t.available_for_a_year}
             pay="59 990 ₸ "
-            per="per month"
+            per={t.per_month}
             />
             <PriceCard
-            title = "Annually"
-            duration = "available for 2 years"
+            title = {t.annually}
+            duration = {t.available_for_2_years}
             pay="349 990 ₸ "
-            per="per year"
+            per={t.per_year}
             />
             
             </div>
