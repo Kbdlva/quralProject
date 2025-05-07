@@ -163,7 +163,8 @@ const Price = () => {
             promo_video: "Жарнама видеосы",
         },
     };
-    const t = translations[localStorage.getItem('lang')];
+    const lang = localStorage.getItem("lang") || "en";
+    const t = translations[lang] || translations["en"];
     const width = useWindowWidth();
 
 
