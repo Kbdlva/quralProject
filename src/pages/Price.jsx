@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 // import "./Price.css"
 import PriceCard from "../Components/UI/PriceCard/PriceCard";
 import "../Components/UI//Price.css";
@@ -9,7 +9,12 @@ import mob from '../styles/PriceMobile.module.css'
 
 const Price = () => {
     const width = useWindowWidth();
-    const t = translations[localStorage.getItem('lang')];
+    const [t, setT] = useState({});
+
+    useEffect(() => {
+        const lang = translations[localStorage.getItem('lang')];
+        setT(lang)
+    }, [])
 
     if (width<400){
         return (

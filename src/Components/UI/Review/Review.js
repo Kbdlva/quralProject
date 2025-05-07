@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Review.css"
 import ReviewCard from "../ReviewCard/ReviewCard";
 import mob from './ReviewMobile.module.css'
@@ -7,7 +7,12 @@ import translations from "../../../utils/translates";
 
 const Review = () => {
     const width = useWindowWidth();
-    const t = translations[localStorage.getItem('lang')];
+    const [t, setT] = useState({});
+
+    useEffect(() => {
+        const lang = translations[localStorage.getItem('lang')];
+        setT(lang)
+    }, [])
 
     if (width<400){
         return (

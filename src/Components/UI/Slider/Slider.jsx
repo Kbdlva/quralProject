@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Slider.css"
 import About from "../About/About";
 import  "../About/About.css"
@@ -16,7 +16,12 @@ import four from '../../../Assets/Rectangle 2 (2).svg'
 
 const Slider = () => {
     const width = useWindowWidth();
-    const t = translations[localStorage.getItem('lang')];
+    const [t, setT] = useState({});
+
+    useEffect(() => {
+        const lang = translations[localStorage.getItem('lang')];
+        setT(lang)
+    }, [])
 
     if (width<400){
         return (

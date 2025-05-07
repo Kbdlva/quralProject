@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import "../Components/UI//FAQ.css";
 import arrowIcon from "../Assets/icons/arrowIcon.svg"
 import ReactPlayer from 'react-player';
@@ -14,7 +14,12 @@ const FAQ = () => {
     };
 
     const width = useWindowWidth();
-    const t = translations[localStorage.getItem('lang')];
+    const [t, setT] = useState({});
+
+    useEffect(() => {
+        const lang = translations[localStorage.getItem('lang')];
+        setT(lang)
+    }, [])
 
     const faqs = [
         {

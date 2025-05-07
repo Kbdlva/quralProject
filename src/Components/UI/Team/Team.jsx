@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Team.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -11,7 +11,12 @@ import translations from "../../../utils/translates";
 
 const Team = () => {
     const width = useWindowWidth();
-    const t = translations[localStorage.getItem('lang')];
+    const [t, setT] = useState({});
+
+    useEffect(() => {
+        const lang = translations[localStorage.getItem('lang')];
+        setT(lang)
+    }, [])
 
     if (width<400){
         return (

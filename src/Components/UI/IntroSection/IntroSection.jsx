@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./IntroSection.css"
 import stock from "./stock.png"
 import useWindowWidth from "../../../utils/useWindowWidth";
@@ -7,7 +7,13 @@ import translations from "../../../utils/translates";
 
 const IntroSection = () => {
     const width = useWindowWidth();
-    const t = translations[localStorage.getItem('lang')];
+    const [t, setT] = useState({});
+
+    useEffect(() => {
+        const lang = translations[localStorage.getItem('lang')];
+        setT(lang)
+    }, [])
+    // const t = translations[localStorage.getItem('lang')];
 
     if (width<400){
         return (
