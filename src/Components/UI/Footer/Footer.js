@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import useWindowWidth from "../../../utils/useWindowWidth";
 import mob from './FooterMobile.module.css'
 import translations from "../../../utils/translates";
- 
+
 function Footer() {
     const width = useWindowWidth();
     const t = translations[localStorage.getItem('lang')];
@@ -62,7 +62,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-logo">
       <img src={logo} alt="Company Logo"/>
-        <p>{t.qural_tagline}</p>
+        <p>{t.qural_tagline || "newddadsdffF"}</p>
         <div className="media">
             <img src={instagram} alt="instagram"/>
             <img src={telegram} alt="telegram"/>
@@ -75,7 +75,7 @@ function Footer() {
             <div className="info-upper">
             <div className="info-left">
                 <ul className="footer-links">
-                    <li className="mini-title">Qural</li> 
+                    <li className="mini-title">Qural</li>
                     <Link to={"/price"} className={"link"}>Price</Link>
                     <Link to={"/faq"} className={"link"}>FAQ</Link>
                 </ul>
@@ -98,9 +98,9 @@ function Footer() {
 
             <div className="info-down">
           </div>
-          
+
         </div>
-      
+
     </footer>
   );
 }
