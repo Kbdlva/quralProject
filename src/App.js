@@ -7,6 +7,7 @@ import Footer from "./Components/UI/Footer/Footer";
 
 function App() {
     const [lang, setLang] = useState('en');
+    console.log("Im here",lang)
 
     useEffect(() => {
         const savedLang = localStorage.getItem('lang');
