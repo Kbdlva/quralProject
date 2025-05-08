@@ -50,6 +50,7 @@
     vertical-align: middle;
     color: #FBF8FF;
     border: none;
+    cursor: pointer;
 }
 .stock{
     width: 314px;

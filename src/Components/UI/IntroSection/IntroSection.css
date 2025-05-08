@@ -32,6 +32,7 @@
     border: none;
     background-color: #223CDD;
     color: white;
+    cursor: pointer;
 }
 .intro__img{
     width: 574px;
