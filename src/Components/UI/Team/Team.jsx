@@ -36,7 +36,7 @@ const Team = () => {
                     />
                     <MemberCard
                         name={"Madiyar Kuralov"}
-                        role={"Frontend Developer"}
+                        role={"React Developer"}
                         work={"SDU University"}
                     />
                     <MemberCard
